@@ -1,0 +1,44 @@
+body {
+  background-image: url("http://www.nthsweb.net/kolovosm/simpsons/home/img/clouds1.jpg");
+}
+#showing {
+  margin: 1% 0%;
+  height: 90vh;
+  padding: 1%;
+}
+.logo {
+  max-height: 100px;
+}
+.clouds {
+  width: 200px;
+}
+.button {
+  text-align: center;
+}
+.display p {
+  width: 10%;
+  float: right;
+  color: yellow;
+}
+.header {
+  color: yellow;
+  font-size: 500%;
+  font-family: "Comic Sans MS";
+  text-shadow: 2px 2px #000000;
+  text-align: center;
+  max-height: 50%;
+}
+.display {
+  color: yellow;
+  font-family: "Comic Sans MS";
+  text-shadow: 2px 2px #000000;
+}
+.gif {
+  text-align: center;
+}
+.gif a {
+  color: yellow;
+  text-decoration: none;
+  font-family: "Comic Sans MS";
+  text-shadow: 2px 2px #000000;
+}
