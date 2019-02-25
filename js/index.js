@@ -21,12 +21,8 @@ function run() {
 
   //unnicode the quote to prepare tweet
   var unicode = encodeURIComponent(quote.replace( "\", ""));
-  var twitter =
-    "https://twitter.com/home/?status=" + unicode + " %0D%23SimpsonsQuotes %0Dhttps://git.io/fhb7w" ;
-  gyphy =
-    "https://api.giphy.com/v1/gifs/search?q=the simpsons " +
-    quote +
-    "&api_key=dc6zaTOxFJmzC";
+  var twitter = "https://twitter.com/home/?status=" + unicode + " %0D%23SimpsonsQuotes %0Dhttps://git.io/fhb7w" ;
+  gyphy = "https://api.giphy.com/v1/gifs/search?q=the simpsons " + quote + "&api_key=dc6zaTOxFJmzC";
 
   //get a gif to load
   $.getJSON(gyphy, function(gif) {
