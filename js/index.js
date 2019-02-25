@@ -53,7 +53,6 @@ function run() {
         $("#one").removeAttr("class");
         $("#two").removeAttr("class");
         $("#showing").css("border", "solid yellow 4px");
-        $("#showing").css("padding", "2%");
         $("iframe").css("position","relative");
         $("iframe").css("top","0px"); 
         $("iframe").css("left","0px"); 
