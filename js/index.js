@@ -48,7 +48,7 @@ function run() {
         quote +
         "</h3></strong><a target='_blank' href='" +
         twitter +
-        "'><p class='fa fa-2x fa-twitter'></p></a>"
+        "'><p class='fa fa-2x fab fa-twitter'></p></a>"
     );
      
         //change the css to prepare output
