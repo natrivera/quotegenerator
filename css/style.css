@@ -3,8 +3,8 @@ body {
   background-color: #87CEFA;
 }
 .container {
-  padding-right: 0px;
-  padding-left: 0px;
+  padding: 0px;
+  margin: 0px;
 }
 .col {
   padding: 0px;
