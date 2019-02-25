@@ -11,7 +11,7 @@ body {
 }
 #showing {
   margin: 1% 0%;
-  height: 90vh;
+  min-height: 90vh;
 }
 .logo {
   max-height: 100px;
