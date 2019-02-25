@@ -20,8 +20,7 @@ function run() {
   }
 
   //unnicode the quote to prepare tweet
-  //var unicode = encodeURIComponent(quote.replace(/[!'()*]/g, escape));
-  var unicode = encodeURIComponent(quote);
+  var unicode = encodeURIComponent(quote.replace( "\", ""));
   var twitter =
     "https://twitter.com/home/?status=" + unicode + " %0D%23SimpsonsQuotes %0Dhttps://git.io/fhb7w" ;
   gyphy =
