@@ -2,6 +2,11 @@ body {
   background-image: url("https://raw.githubusercontent.com/natrivera/quotegenerator/master/clouds-bk.png");
   background-color: #87CEFA;
 }
+.container {
+  padding-right: 0px;
+  padding-left: 0px;
+
+}
 #showing {
   margin: 1% 0%;
   height: 90vh;
