@@ -24,7 +24,7 @@ function run() {
   var twitter =
     "https://twitter.com/home/?status=" + unicode + " %23SimpsonsQuotes";
   gyphy =
-    "https://api.giphy.com/v1/gifs/search?q=the simpsons+" +
+    "https://api.giphy.com/v1/gifs/search?q=the simpsons " +
     quote +
     "&api_key=dc6zaTOxFJmzC";
 
