@@ -20,7 +20,8 @@ function run() {
   }
 
   //unnicode the quote to prepare tweet
-  var unicode = encodeURIComponent(quote.replace( "\\", ""));
+  var unicode = encodeURIComponent(quote);
+  unicode = unicode.replace("'", "%27");
   var twitter = "https://twitter.com/home/?status=" + unicode + " %0D%23SimpsonsQuotes %0Dhttps://git.io/fhb7w" ;
   gyphy = "https://api.giphy.com/v1/gifs/search?q=the simpsons " + quote + "&api_key=dc6zaTOxFJmzC";
 
