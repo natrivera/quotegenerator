@@ -2,6 +2,7 @@
 var number,
   search,
   gyphy,
+  character,
   embed = "https://giphy.com/embed/Xc0HkcmDXrXDG",
   first = 0;
 var quote = "You don't win friends with salad. -Simpsons";
@@ -17,20 +18,21 @@ function run() {
     //quote = quotes[number];
 
     $.getJSON(apiURL, function(df) {
-        quote = df.quote;
+        quote = df[0].quote;
+        character = df[0].character;
+        quote = quote + '- ' + character;
+        //console.log(df[0].quote);
 
     }); // end of getJSON gets quote from api
 
-    first++;
-  } else {
-    first++;
-  }
+  } // end of if
+  first++;
 
   //unnicode the quote to prepare tweet
   var unicode = encodeURIComponent(quote);
   unicode = unicode.replace("'", "%27");
   var twitter = "https://twitter.com/home/?status=" + unicode + " %0D%23SimpsonsQuotes %0Dhttps://natrivera.github.io/quotegenerator/" ;
-  gyphy = "https://api.giphy.com/v1/gifs/search?q=the simpsons " + quote + "&api_key=dc6zaTOxFJmzC";
+  gyphy = "https://api.giphy.com/v1/gifs/search?q=" + quote.substring(0,50) + "&api_key=dc6zaTOxFJmzC";
 
   //get a gif to load
   $.getJSON(gyphy, function(gif) {
@@ -72,7 +74,7 @@ function run() {
         $("iframe").css("margin","auto");
         $("iframe").css("padding","auto");
 
-  }, 500);//end of setTimeout
+  }, 300);//end of setTimeout
 }//end of run//
 
 //run the function when the cloud is clicked
@@ -84,9 +86,9 @@ $(".button").click(function() {
 $(document).ready(function() {
   setTimeout(function() {
     run();
-  }, 3000);
+  }, 100);
 
   setInterval(function() {
     run();
-  }, 12000);
+  }, 15000);
 });
