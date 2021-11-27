@@ -17,10 +17,10 @@ function run() {
     //quote = quotes[number];
 
     $.getJSON(apiURL, function(df) {
-        quote = df.'quote';
+        quote = df.quote;
 
     }); // end of getJSON gets quote from api
-    
+
     first++;
   } else {
     first++;
