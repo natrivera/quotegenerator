@@ -5,15 +5,22 @@ var number,
   embed = "https://giphy.com/embed/Xc0HkcmDXrXDG",
   first = 0;
 var quote = "You don't win friends with salad. -Simpsons";
+var apiURL = 'https://thesimpsonsquoteapi.glitch.me/quotes'
 
 //functions that will load quote
 function run() {
   //get a random number
-  number = Math.floor(Math.random() * quotes.length);
+  number = Math.floor(Math.random() * 500);
 
   //will not get a random quote the first time
   if (first != 0) {
-    quote = quotes[number];
+    //quote = quotes[number];
+
+    $.getJSON(apiURL, function(df) {
+        quote = df.'quote';
+
+    }); // end of getJSON gets quote from api
+    
     first++;
   } else {
     first++;
@@ -47,24 +54,24 @@ function run() {
         twitter +
         "'><p class='fa fa-2x fab fa-twitter'></p></a>"
     );
-     
+
         //change the css to prepare output
         $(".header").html("");
         $("#one").removeAttr("class");
         $("#two").removeAttr("class");
         $("#showing").css("border", "solid yellow 4px");
         $("iframe").css("position","relative");
-        $("iframe").css("top","0px"); 
-        $("iframe").css("left","0px"); 
+        $("iframe").css("top","0px");
+        $("iframe").css("left","0px");
         $("iframe").css("overflow","hidden");
-        $("iframe").css("bottom","0px"); 
-        $("iframe").css("right","0px"); 
-        $("iframe").css("width","100%"); 
-        $("iframe").css("min-height","50vh"); 
-        $("iframe").css("border","none"); 
-        $("iframe").css("margin","auto"); 
+        $("iframe").css("bottom","0px");
+        $("iframe").css("right","0px");
+        $("iframe").css("width","100%");
+        $("iframe").css("min-height","50vh");
+        $("iframe").css("border","none");
+        $("iframe").css("margin","auto");
         $("iframe").css("padding","auto");
-     
+
   }, 500);//end of setTimeout
 }//end of run//
 
